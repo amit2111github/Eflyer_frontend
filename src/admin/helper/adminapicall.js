@@ -16,6 +16,8 @@ export const createCateory = (userId, token, categoryName) => {
 };
 // get All categgory
 export const getAllCategory = () => {
+	console.log("**************");
+	console.log(API);
 	return fetch(`${API}/category/All`, {
 		method: 'get',
 	})
