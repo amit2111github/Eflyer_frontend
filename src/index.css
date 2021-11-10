@@ -1,0 +1,49 @@
+.btn,
+.jumbotron,
+.nav :hover {
+  border-radius: 0px;
+}
+body {
+  background  : #f2c42e
+;
+}
+footer {
+  position: relative;
+  bottom: 0px;
+  right : 0px;
+  left : 0px;
+}
+.row-main {
+    padding: 1.5vh 0;
+    align-items: center
+}
+.form-control:focus {
+  border-color: #e74e11;
+  box-shadow: 0px 1px 1px rgba(26, 170, 21, 0.075) inset, 0px 0px 8px rgba(224, 14, 6, 0.5);
+}
+	span {cursor:pointer; }
+		.number{
+			margin:100px;
+		}
+		.minus, .plus{
+			width:20px;
+			height:20px;
+			background:#f2f2f2;
+			border-radius:4px;
+			padding:8px 5px 8px 5px;
+			border:1px solid #ddd;
+      display: inline-block;
+      vertical-align: middle;
+      text-align: center;
+		}
+		.qty{
+			height:34px;
+      width: 100px;
+      text-align: center;
+      font-size: 26px;
+			border:1px solid #ddd;
+			border-radius:4px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+			
