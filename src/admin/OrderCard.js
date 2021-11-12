@@ -5,9 +5,9 @@ const OrderCard = ({ order }) => {
 		<div className="card mb-2 rounded">
 			<div className="card-header bg-dark text-warning">
 				<div className="row">
-					<div className="col-4">Username : {order.user.name}</div>
-					<div className="col-4">Email : {order.user.email}</div>
-					<div className="col-4">Status : {order.status}</div>
+					<div className="col-4">Username : {order?.user?.name}</div>
+					<div className="col-4">Email : {order?.user?.email}</div>
+					<div className="col-4">Status : {order?.status}</div>
 				</div>
 				<div className="row">
 					<div className="col-4">Order Date : {order.createdAt.toLocaleString()}</div>
