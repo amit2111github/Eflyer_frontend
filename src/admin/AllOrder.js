@@ -14,7 +14,7 @@ const AllOrder = () => {
 		setOrders(data);
 	}, []);
 	const getAllOrders = () => {
-		if (orders === undefined || orders.length === 0) return <h2>No Order has been Placed.</h2>;
+		if (!orders || orders === undefined || orders.length === 0) return <h2>No Order has been Placed.</h2>;
 		return orders.map((order) => <OrderCard order={order} key={order._id} />);
 	};
 	return (
