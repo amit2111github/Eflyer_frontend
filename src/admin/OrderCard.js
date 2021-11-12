@@ -19,26 +19,27 @@ const OrderCard = ({ order }) => {
 			</div>
 			<div className="card-header rounded" style={{ backgroundColor: '#c9a41e' }}>
 				<div className="row">
-					{order.products.map((o) => (
-						<div className="text-dark col-3 mr-1 mb-1 mt-1">
-							<div>
-								<ul className="list-group">
-									<li className="list-group-item">
-										<span className="badge badge-success mr-2">Name :</span>
-										{o.name}
-									</li>
-									<li className="list-group-item">
-										<span className="badge badge-success mr-2">Quantity :</span>
-										{o.count}
-									</li>
-									<li className="list-group-item">
-										<span className="badge badge-success mr-2">Price :</span>
-										{o.count * o.price}
-									</li>
-								</ul>
+					{order.produce &&
+						order.products.map((o) => (
+							<div className="text-dark col-3 mr-1 mb-1 mt-1">
+								<div>
+									<ul className="list-group">
+										<li className="list-group-item">
+											<span className="badge badge-success mr-2">Name :</span>
+											{o.name}
+										</li>
+										<li className="list-group-item">
+											<span className="badge badge-success mr-2">Quantity :</span>
+											{o.count}
+										</li>
+										<li className="list-group-item">
+											<span className="badge badge-success mr-2">Price :</span>
+											{o.count * o.price}
+										</li>
+									</ul>
+								</div>
 							</div>
-						</div>
-					))}
+						))}
 				</div>
 			</div>
 		</div>
