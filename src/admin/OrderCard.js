@@ -19,7 +19,7 @@ const OrderCard = ({ order }) => {
 			</div>
 			<div className="card-header rounded" style={{ backgroundColor: '#c9a41e' }}>
 				<div className="row">
-					{order.produce &&
+					{order.products &&
 						order.products.map((o) => (
 							<div className="text-dark col-3 mr-1 mb-1 mt-1">
 								<div>
