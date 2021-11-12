@@ -1,6 +1,8 @@
 import React from 'react';
 
 const OrderCard = ({ order }) => {
+	console.log(order.user);
+	console.log(order.user.name);
 	return (
 		<div className="card mb-2 rounded">
 			<div className="card-header bg-dark text-warning">
