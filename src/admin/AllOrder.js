@@ -10,7 +10,6 @@ const AllOrder = () => {
 	const [orders, setOrders] = useState([]);
 	useEffect(async () => {
 		const data = await getAllOrder(user._id, token);
-		console.log(data);
 		setOrders(data);
 	}, []);
 	const getAllOrders = () => {

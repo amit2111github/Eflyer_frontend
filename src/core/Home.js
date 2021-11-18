@@ -6,8 +6,9 @@ import { getProducts } from '../admin/helper/adminapicall';
 import { addItemToCart } from './Carthelper';
 import Footer from './Footer';
 import '../css/cardStyle.css';
-
+console.log(API);
 function Home({ history }) {
+	
 	const [products, setProducts] = useState([]);
 	useEffect(async () => {
 		const data = await getProducts();
