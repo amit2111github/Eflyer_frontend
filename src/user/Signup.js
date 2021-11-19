@@ -14,11 +14,13 @@ function Signup({ history }) {
 		error: '',
 		success: false,
 	});
+	const [loading, setLoading] = useState();
 	const { name, email, password, error, success } = values;
 	const handleChange = (event) => {
 		setValues({ ...values, [event.target.name]: event.target.value });
 	};
 	const handleSubmit = async (event) => {
+		setLoading(false);
 		try {
 			event.preventDefault();
 			setValues({
@@ -26,7 +28,9 @@ function Signup({ history }) {
 				error: '',
 				success: '',
 			});
+			setLoading(true);
 			const res = await signup({ name, email, password });
+			setLoading(false);
 			if (res.error || res.errors) {
 				setValues({
 					...values,
@@ -49,6 +53,11 @@ function Signup({ history }) {
 	const successMessage = () => (
 		<div className="alert alert-success messages" style={{ display: success ? '' : 'none' }}>
 			<h4>New Account is created successfully.</h4>
+		</div>
+	);
+	const loadingMessage = () => (
+		<div className="alert alert-success messages" style={{ display: loading ? '' : 'none' }}>
+			<h4>Loading.</h4>
 		</div>
 	);
 	const errorMessage = () => (
@@ -76,6 +85,7 @@ function Signup({ history }) {
 							</div>
 						</div>
 						<p className="messages font-weight-normal">Welcome</p>
+						{loadingMessage()}
 						{successMessage()}
 						{errorMessage()}
 						<SignupForm handleChange={handleChange} fields={values} handleSubmit={handleSubmit} />

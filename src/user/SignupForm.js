@@ -38,7 +38,7 @@ const SignupForm = ({ handleChange, fields, handleSubmit }) => {
 					</div>
 					<div class="addtoCart mt-4">
 						<a onClick={handleSubmit} type="submit" onClick={handleSubmit}>
-							Sign In
+							Sign Up
 						</a>
 					</div>
 					<div className="createAccount">
